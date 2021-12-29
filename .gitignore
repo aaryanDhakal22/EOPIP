@@ -1,3 +1,14 @@
+# === User Defined ======
+
+# Pdf
+*.pdf
+
+# No exe
+*/*.exe
+
+
+# === Github preset ===
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
