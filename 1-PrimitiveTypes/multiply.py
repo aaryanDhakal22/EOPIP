@@ -15,6 +15,3 @@ def multiply(x, y):
             result = add(result, y)
         x, y = x >> 1, y << 1
     return result
-
-
-print(add(5, 6))
