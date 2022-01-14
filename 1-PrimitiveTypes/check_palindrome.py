@@ -1,9 +1,15 @@
-import math
-from operator import is_
+# Number is a palindrome ?
 
 # You check the first and the last digit using mod by 10 and log10(x)
 # compare them and then continue checking and remove the last and first
 # digit and move the mod mask by 100 because u removed 2 digits
+
+# O(n/2)
+# O(1)
+
+import math
+
+
 def is_palindrome(x):
     if x <= 0:
         return x == 0
@@ -18,6 +24,3 @@ def is_palindrome(x):
         msd_mask //= 100
 
     return True
-
-
-print(is_palindrome(8996))

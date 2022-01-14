@@ -1,4 +1,10 @@
-from unittest import result
+# Divide two numbers using bit manipulation
+
+# You gradually subtract powers of 2 from higher to lower from the
+# divident until you gesomething less than the divisor
+
+# O(n)
+# O(1)
 
 
 def divide(x, y) -> int:
@@ -17,27 +23,3 @@ def divide(x, y) -> int:
         counter += 1
         print(counter)
     return quotient
-
-
-def bit_div(a, b):
-
-    ans = 0  # the quotient is intialized
-
-    neg = a < 0 or b < 0  # Checking if one of the numbers is negative
-
-    a = abs(a)  # making sure both the numbers
-    b = abs(b)  # are positive
-    counter = 0
-    for i in range(31, -1, -1):  # starting our loop
-
-        if b << i <= a:  # checking if b multiplied by 2**i is <= a
-            a -= b << i  # subtracting b << i from a
-            ans += 1 << i  # adding 2 power i to the answer
-        counter += 1
-
-    print(counter)
-    # and finally checking if the output should be negative and returning it
-    return ans if neg == 0 else -1 * ans
-
-
-print(bit_div(6, 2))

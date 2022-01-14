@@ -6,7 +6,7 @@
 # No exe
 */*.exe
 
-
+py2anki/
 # === Github preset ===
 
 # Byte-compiled / optimized / DLL files

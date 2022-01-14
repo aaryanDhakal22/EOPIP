@@ -1,12 +1,15 @@
-# BRUTE FORCE
-# isolate the ith and the jth bit and store in variable
-# clear the ith and jth
-# use OR with the local varibale to combile 
+# Swap the Bits
 
-# Optimised : O(1)
-def swap_bits(x,i,j):
-    if (x>>i) & 1 != (x>>j) & 1:
-        #ith and jth both differ. We will swap by flipping each value.
-        bit_mask = (1<<i) | (1 << j) # since 1's can be used with XOR to swap
-        x^= bit_mask
+# If they different then only swap else useless. To swap
+# get 2 1's in the ith and jth position using shifting and OR'ing
+# then XOR to flip
+
+# O(1)
+# O(1)
+
+
+def swap_bits(x, i, j):
+    if (x >> i) & 1 != (x >> j) & 1:
+        bit_mask = (1 << i) | (1 << j)
+        x ^= bit_mask
     return x

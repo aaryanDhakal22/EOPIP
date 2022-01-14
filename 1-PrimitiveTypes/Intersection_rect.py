@@ -1,3 +1,13 @@
+# Check if two rectangles have intersection and return it
+
+# You have to think dimensions independently. X1 shouldnt fall less
+# than X2 + width and so on for all and then to find intersection
+# min max the co-ordinates and add remove verice magnitude from width/height
+
+# O(1)
+# O(1)
+
+
 class Rectangle:
     def __init__(self, x, y, width, height) -> None:
         self.x = x

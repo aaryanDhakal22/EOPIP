@@ -1,15 +1,11 @@
-# def divisibleSumPairs(n, k, ar):
-#     rest = [0] * k
-#     nrOfPairs = 0
-#     for elem in ar:
-#         modu = elem % k
-#         comp = k - modu
-#         test3 = comp % k
-#         test4 = rest[test3]
-#         nrOfPairs += test4
+# Find the sum pair who is divisible by a certain integer in an arry
 
-#         rest[elem % k] += 1
-#     return nrOfPairs
+# You modulo from the start and compute the complement and
+# store the modulo that way when u see a complement that matches
+# the modulo hashmap you add to the counter
+
+# O(n)
+# O(k)
 
 
 def divisibleSumPairs(n, k, arr):
@@ -30,6 +26,3 @@ def divisibleSumPairs(n, k, arr):
         print("comple", comp)
         print("couunter", counter, "\n")
     return counter
-
-
-print(divisibleSumPairs(7, 5, [1, 2, 3, 4, 5, 6, 7]))
